@@ -51,7 +51,11 @@ if (place_meeting(x+hspd, y, obj_wall)) {
 if (place_meeting(x, y+vspd, obj_enemy)) {
 	if (vspd > 0) {
 		enem = instance_place(x, y+vspd, obj_enemy);
-		newboy = instance_create_depth(enem.x,enem.y,depth,obj_enem_player1);
+		if (enem.charid == "F") {
+			newboy = instance_create_depth(enem.x,enem.y,depth,obj_enem_player1);
+		} else if (enem.charid == "J") {
+			newboy = instance_create_depth(enem.x,enem.y,depth,obj_enem_player_jump);
+		}
 		with (newboy) {
 			dummylist = ["S"];
 		}

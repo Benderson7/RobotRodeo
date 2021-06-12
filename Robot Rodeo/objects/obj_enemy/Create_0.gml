@@ -12,3 +12,5 @@ coyote = 0;
 hspd = -spd;
 vspd = 0;
 onground = true;
+
+charid = "F";

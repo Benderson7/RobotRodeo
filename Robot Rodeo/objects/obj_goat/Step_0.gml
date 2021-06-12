@@ -20,7 +20,7 @@ if (place_meeting(x, y+vspd, obj_wall)) {
 }
 
 if (onground) {
-	vspd -= 20;
+	vspd -= 6;
 }
 
 if (place_meeting(x+hspd, y, obj_wall)) {

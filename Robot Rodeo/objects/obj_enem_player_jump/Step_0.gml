@@ -36,8 +36,8 @@ if (vspd >= termvel) {
 	vspd = termvel;	
 }
 
-if (keyboard_check_pressed(ord("W")) && onground) {
-	vspd = -jump;	
+if (onground) {
+	vspd = -jump - 5;	
 }
 
 if (place_meeting(x + hspd, y + vspd, obj_spike)) {

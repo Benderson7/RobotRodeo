@@ -13,7 +13,10 @@ if (becomeboy) {
 		if (charid == "F") {
 			newboy = instance_create_depth(x,y,depth, obj_enem_player1);	
 			newboy.dummylist = potentialdummylist;
-		} //add jumpy and armor pls uwu
+		} else if (charid == "J") {
+			newboy	= instance_create_depth(x,y,depth, obj_enem_player_jump);	
+			newboy.dummylist = potentialdummylist;
+		}
 		
 		with(obj_dummy) {
 			instance_destroy();	
