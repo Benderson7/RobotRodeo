@@ -15,6 +15,8 @@
     {"id":{"name":"obj_enem_player1","path":"objects/obj_enem_player1/obj_enem_player1.yy",},"order":3,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"spr_wall_top","path":"sprites/spr_wall_top/spr_wall_top.yy",},"order":5,},
+    {"id":{"name":"spr_wall_1","path":"sprites/spr_wall_1/spr_wall_1.yy",},"order":10,},
+    {"id":{"name":"spr_background_1","path":"sprites/spr_background_1/spr_background_1.yy",},"order":9,},
     {"id":{"name":"obj_enem_dummy","path":"objects/obj_enem_dummy/obj_enem_dummy.yy",},"order":6,},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},"order":2,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
