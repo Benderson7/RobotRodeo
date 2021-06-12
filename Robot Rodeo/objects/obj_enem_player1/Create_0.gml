@@ -5,6 +5,7 @@ dummylist = [];
 createddummies = false;
 topcollideright = false;
 topcollideleft = false;
+topcollidetop = false;
 charid = "F";
 
 termvel = 15;

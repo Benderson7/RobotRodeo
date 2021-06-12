@@ -8,6 +8,10 @@ if (place_meeting(x - target.spd, y, obj_wall)) {
 	target.topcollideleft = true;	
 }
 
+if (place_meeting(x, y - target.vspd * sign(target.vspd), obj_wall)) {
+	target.topcollidetop = true;	
+}
+
 if (becomeboy) {
 	if (charid != "S") {
 		if (charid == "F") {

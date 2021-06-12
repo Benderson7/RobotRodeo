@@ -114,8 +114,13 @@ if (topcollideleft && hspd < 0) {
 	hspd = 0;	
 }
 
+if (topcollidetop && vspd < 0) {
+	vspd = 0;	
+}
+
 y += vspd;
 x += hspd;
 
 topcollideright = false;
 topcollideleft = false;
+topcollidetop = false;
