@@ -20,6 +20,10 @@ if (keyboard_check_pressed(ord("W")) && onground) {
 	vspd = -jump;	
 }
 
+if (place_meeting(x + hspd, y + vspd, obj_spike)) {
+	instance_destroy();
+}
+
 if (place_meeting(x, y+vspd, obj_wall)) {
 	while (!place_meeting(x, y + sign(vspd), obj_wall)) {
 		y += sign(vspd);
@@ -43,6 +47,22 @@ if (place_meeting(x+hspd, y, obj_wall)) {
 	
 	hspd = 0;	
 }
+
+if (place_meeting(x, y+vspd, obj_enemy)) {
+	if (vspd > 0) {
+		enem = instance_place(x, y+vspd, obj_enemy);
+		newboy = instance_create_depth(enem.x,enem.y,depth,obj_enem_player1);
+		with (newboy) {
+			dummylist = ["S"];
+		}
+		instance_destroy(enem);
+		instance_destroy();
+	} else {
+		instance_destroy();	
+	}
+}
+
+
 
 y += vspd;
 x += hspd;
