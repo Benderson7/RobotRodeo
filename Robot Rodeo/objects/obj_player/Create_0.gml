@@ -13,3 +13,5 @@ vspd = 0;
 onground = true;
 
 iframe = 0;
+
+facingright = true;

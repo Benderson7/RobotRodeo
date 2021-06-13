@@ -4,3 +4,4 @@ event_inherited();
 
 charid = "J";
 hspd = 0;
+image_speed = 0;

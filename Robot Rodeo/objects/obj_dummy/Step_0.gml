@@ -12,6 +12,12 @@ if (place_meeting(x, y - target.vspd * sign(target.vspd), obj_wall)) {
 	target.topcollidetop = true;	
 }
 
+if (target.facingright) {
+	sprite_index = right_sprite;	
+} else {
+	sprite_index = left_sprite;
+}
+
 if (becomeboy) {
 	iframetime = 90;
 	if (charid != "S") {

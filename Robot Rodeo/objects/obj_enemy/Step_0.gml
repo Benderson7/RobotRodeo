@@ -23,6 +23,21 @@ if (place_meeting(x+hspd, y, obj_wall)) {
 	hspd *= -1;	
 }
 
+if (hspd > 0) {
+	if(!facingright) {
+		facingright = true;
+	}
+} else if (hspd < 0) {
+	if(facingright) {
+		facingright = false;	
+	}
+}
+
+if(facingright){
+	sprite_index = right_sprite;	
+} else {
+	sprite_index = left_sprite;	
+}
 
 y += vspd;
 x += hspd;

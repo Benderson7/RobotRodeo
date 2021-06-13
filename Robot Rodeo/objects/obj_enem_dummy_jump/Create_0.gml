@@ -3,3 +3,5 @@
 event_inherited();
 
 charid = "J";
+right_sprite = spr_goat_right;
+left_sprite = spr_goat_left;

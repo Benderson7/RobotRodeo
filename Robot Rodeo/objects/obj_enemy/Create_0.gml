@@ -14,3 +14,7 @@ vspd = 0;
 onground = true;
 
 charid = "F";
+image_speed = 2;
+facingright = true;
+right_sprite = spr_enemy_right;
+left_sprite = spr_enemy_left;

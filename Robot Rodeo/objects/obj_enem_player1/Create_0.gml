@@ -19,3 +19,7 @@ vspd = 0;
 onground = true;
 
 iframe = 0;
+facingright = true;
+image_speed = 2;
+right_sprite = spr_enemy_right;
+left_sprite = spr_enemy_left;

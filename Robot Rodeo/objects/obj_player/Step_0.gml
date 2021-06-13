@@ -80,6 +80,21 @@ if (place_meeting(x, y+vspd, obj_enemy) && iframe == 0) {
 	}
 }
 
+if (hspd > 0) {
+	if(!facingright) {
+		facingright = true;
+	}
+} else if (hspd < 0) {
+	if(facingright) {
+		facingright = false;	
+	}
+}
+
+if(facingright){
+	sprite_index = spr_player_right;	
+} else {
+	sprite_index = spr_player_left;	
+}
 
 
 y += vspd;

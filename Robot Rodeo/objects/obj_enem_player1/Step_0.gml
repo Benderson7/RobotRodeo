@@ -124,6 +124,26 @@ if (topcollidetop && vspd < 0) {
 	vspd = 0;	
 }
 
+if (hspd > 0) {
+	if(!facingright) {
+		facingright = true;
+	}
+	image_speed = 2;
+} else if (hspd < 0) {
+	if(facingright) {
+		facingright = false;	
+	}
+	image_speed = 2;
+} else {
+	image_speed = 0;
+	image_index = 0;
+}
+
+if(facingright){
+	sprite_index = right_sprite;	
+} else {
+	sprite_index = left_sprite;	
+}
 
 
 y += vspd;

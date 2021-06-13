@@ -99,7 +99,7 @@ if (place_meeting(x, y+vspd, obj_enemy) && iframe == 0) {
 		instance_destroy();
 	} else {
 		son = instance_place(x, y-2, obj_dummy)
-		son.becomeboy = true;
+		son.becomeboy = true;  ///FIX PLEASEE :)
 		newdummies = [];
 		for (var i = 0; i < array_length(dummylist) - 1; i++) {
 			newdummies[i] = dummylist[i];	
@@ -122,6 +122,29 @@ if (topcollideleft && hspd < 0) {
 
 if (topcollidetop && vspd < 0) {
 	vspd = 0;	
+}
+
+if (hspd > 0) {
+	if(!facingright) {
+		facingright = true;
+	}
+	
+} else if (hspd < 0) {
+	if(facingright) {
+		facingright = false;	
+	}	
+}
+
+if(facingright){
+	sprite_index = right_sprite;	
+} else {
+	sprite_index = left_sprite;	
+}
+
+if (!place_meeting(x, y+64, obj_wall)) {
+	image_index = 1;	
+} else {
+	image_index = 0;	
 }
 
 y += vspd;
