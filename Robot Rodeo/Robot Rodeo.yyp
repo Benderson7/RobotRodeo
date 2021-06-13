@@ -19,6 +19,7 @@
     {"id":{"name":"obj_enem_dummy_jump","path":"objects/obj_enem_dummy_jump/obj_enem_dummy_jump.yy",},"order":10,},
     {"id":{"name":"_08_Fall_And_Climb","path":"rooms/_08_Fall_And_Climb/_08_Fall_And_Climb.yy",},"order":7,},
     {"id":{"name":"_02_First_Stack","path":"rooms/_02_First_Stack/_02_First_Stack.yy",},"order":2,},
+    {"id":{"name":"obj_helpy_boy","path":"objects/obj_helpy_boy/obj_helpy_boy.yy",},"order":15,},
     {"id":{"name":"_01_Learn_Movement","path":"rooms/_01_Learn_Movement/_01_Learn_Movement.yy",},"order":1,},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":0,},
     {"id":{"name":"_09_Double_Doors","path":"rooms/_09_Double_Doors/_09_Double_Doors.yy",},"order":8,},
