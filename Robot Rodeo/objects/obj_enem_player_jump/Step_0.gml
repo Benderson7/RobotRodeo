@@ -14,7 +14,11 @@ if (!createddummies) {
 			newboy = instance_create_depth(x, y-64, depth, obj_enem_dummy_jump);	
 			newboy.target = self;
 			newboy.height = array_length(dummylist) - i;
-		}
+		}  else if(dummylist[i] == "A") {
+			newboy = instance_create_depth(x, y-64, depth, obj_enem_dummy_armor);	
+			newboy.target = self;
+			newboy.height = array_length(dummylist) - i;
+		} 
 	}
 	createddummies = true;
 }
@@ -86,6 +90,8 @@ if (place_meeting(x, y+vspd, obj_enemy)) {
 			newboy = instance_create_depth(enem.x,enem.y,depth,obj_enem_player1);
 		} else if (enem.charid == "J") {
 			newboy = instance_create_depth(enem.x,enem.y,depth,obj_enem_player_jump);
+		} else if (enem.charid == "A") {
+			newboy = instance_create_depth(enem.x,enem.y,depth,obj_enem_player_armor);
 		}
 		newboy.dummylist = dummylist;
 		newboy.dummylist[array_length(dummylist)] = charid;

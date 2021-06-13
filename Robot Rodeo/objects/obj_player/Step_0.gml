@@ -55,6 +55,8 @@ if (place_meeting(x, y+vspd, obj_enemy)) {
 			newboy = instance_create_depth(enem.x,enem.y,depth,obj_enem_player1);
 		} else if (enem.charid == "J") {
 			newboy = instance_create_depth(enem.x,enem.y,depth,obj_enem_player_jump);
+		} else if (enem.charid == "A") {
+			newboy = instance_create_depth(enem.x,enem.y,depth,obj_enem_player_armor);
 		}
 		with (newboy) {
 			dummylist = ["S"];

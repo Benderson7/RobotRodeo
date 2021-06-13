@@ -2,5 +2,5 @@
 // You can write your code in this editor
 event_inherited();
 
-charid = "J";
-hspd = 0;
+charid = "A";
+spd = 3;

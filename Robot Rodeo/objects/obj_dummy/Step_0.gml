@@ -20,6 +20,9 @@ if (becomeboy) {
 		} else if (charid == "J") {
 			newboy	= instance_create_depth(x,y,depth, obj_enem_player_jump);	
 			newboy.dummylist = potentialdummylist;
+		} else if (charid == "A") {
+			newboy	= instance_create_depth(x,y,depth, obj_enem_player_armor);	
+			newboy.dummylist = potentialdummylist;
 		}
 		
 		with(obj_dummy) {
