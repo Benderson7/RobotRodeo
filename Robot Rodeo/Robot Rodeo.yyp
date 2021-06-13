@@ -21,7 +21,6 @@
     {"id":{"name":"obj_enem_player_armor","path":"objects/obj_enem_player_armor/obj_enem_player_armor.yy",},"order":14,},
     {"id":{"name":"obj_player_dummy","path":"objects/obj_player_dummy/obj_player_dummy.yy",},"order":5,},
     {"id":{"name":"_03_Multi_Stack","path":"rooms/_03_Multi_Stack/_03_Multi_Stack.yy",},"order":3,},
-    {"id":{"name":"obj_can_be_moved","path":"objects/obj_can_be_moved/obj_can_be_moved.yy",},"order":21,},
     {"id":{"name":"obj_move_plat","path":"objects/obj_move_plat/obj_move_plat.yy",},"order":19,},
     {"id":{"name":"obj_enem_dummy_armor","path":"objects/obj_enem_dummy_armor/obj_enem_dummy_armor.yy",},"order":13,},
     {"id":{"name":"spr_wall","path":"sprites/spr_wall/spr_wall.yy",},"order":1,},
@@ -72,6 +71,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"_09_Double_Doors","path":"rooms/_09_Double_Doors/_09_Double_Doors.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"_01_Learn_Movement","path":"rooms/_01_Learn_Movement/_01_Learn_Movement.yy",},},
     {"roomId":{"name":"_02_First_Stack","path":"rooms/_02_First_Stack/_02_First_Stack.yy",},},
@@ -81,7 +81,6 @@
     {"roomId":{"name":"_06_Wait_For_Sheep","path":"rooms/_06_Wait_For_Sheep/_06_Wait_For_Sheep.yy",},},
     {"roomId":{"name":"_07_Ride_Over_Fence","path":"rooms/_07_Ride_Over_Fence/_07_Ride_Over_Fence.yy",},},
     {"roomId":{"name":"_08_Fall_And_Climb","path":"rooms/_08_Fall_And_Climb/_08_Fall_And_Climb.yy",},},
-    {"roomId":{"name":"_09_Double_Doors","path":"rooms/_09_Double_Doors/_09_Double_Doors.yy",},},
     {"roomId":{"name":"_10_Super_Stack","path":"rooms/_10_Super_Stack/_10_Super_Stack.yy",},},
   ],
   "Folders": [
