@@ -54,7 +54,7 @@ if (place_meeting(x + hspd, y + vspd, obj_spike)) {
 			newdummies[i] = dummylist[i];	
 		}
 		son.potentialdummylist = newdummies;
-
+		instance_create_depth(x,y,depth, obj_explode);
 		instance_destroy();
 	}
 }
@@ -110,8 +110,9 @@ if (place_meeting(x, y+vspd, obj_enemy) && iframe == 0) {
 		son.potentialdummylist = newdummies;
 		
 		destroy = instance_place(x, y+vspd, obj_enemy);
+		instance_create_depth(destroy.x,destroy.y,depth, obj_explode);
 		instance_destroy(destroy);
-		
+		instance_create_depth(x,y,depth, obj_explode);
 		instance_destroy();
 	}
 }

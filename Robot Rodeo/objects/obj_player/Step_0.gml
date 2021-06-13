@@ -6,6 +6,7 @@ if (keyboard_check(ord("R"))) {
 	with(obj_fade) {
 		dead = true;
 	}
+	instance_create_depth(x,y,depth, obj_explode);
 	instance_destroy();
 }
 
@@ -31,6 +32,7 @@ if (place_meeting(x + hspd, y + vspd, obj_spike) && iframe == 0) {
 	with(obj_fade) {
 		dead = true;	
 	}
+	instance_create_depth(x,y,depth, obj_explode);
 	instance_destroy();
 }
 
@@ -83,6 +85,7 @@ if (place_meeting(x, y+vspd, obj_enemy) && iframe == 0) {
 		with(obj_fade) {
 			dead = true;	
 		}
+		instance_create_depth(x,y,depth, obj_explode);
 		instance_destroy();
 	}
 }

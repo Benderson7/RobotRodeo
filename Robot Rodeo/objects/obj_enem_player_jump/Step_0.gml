@@ -52,7 +52,7 @@ if (place_meeting(x + hspd, y + vspd, obj_spike) && iframe == 0) {
 			newdummies[i] = dummylist[i];	
 		}
 		son.potentialdummylist = newdummies;
-
+		instance_create_depth(x,y,depth, obj_explode);
 		instance_destroy();
 }
 
@@ -97,7 +97,7 @@ if (place_meeting(x, y+vspd, obj_enemy) && iframe == 0) {
 		newboy.dummylist[array_length(dummylist)] = charid;
 		instance_destroy(enem);
 		instance_destroy();
-	} else {
+	} /*else {
 		son = instance_place(x, y-2, obj_dummy)
 		son.becomeboy = true;  ///FIX PLEASEE :)
 		newdummies = [];
@@ -105,9 +105,9 @@ if (place_meeting(x, y+vspd, obj_enemy) && iframe == 0) {
 			newdummies[i] = dummylist[i];	
 		}
 		son.potentialdummylist = newdummies;
-
+		
 		instance_destroy();
-	}
+	} */
 }
 
 if (topcollideright && hspd > 0) {

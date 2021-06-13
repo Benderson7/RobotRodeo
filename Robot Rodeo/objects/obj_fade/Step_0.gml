@@ -3,12 +3,17 @@
 
 if (dead || win) {
 	with(obj_enemy) {
-		draw_sprite(sprite_index, image_index, x, y);
+		instance_create_depth(x,y,depth, obj_explode);
 		instance_deactivate_object(self);
 	}
 	
 	with(obj_enem_player1) {
-		draw_sprite(sprite_index, image_index, x, y);
+		instance_create_depth(x,y,depth, obj_explode);
+		instance_deactivate_object(self);
+	}
+	
+	with(obj_dummy) {
+		instance_create_depth(x,y,depth, obj_explode);
 		instance_deactivate_object(self);
 	}
 }

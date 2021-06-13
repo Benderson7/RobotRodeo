@@ -12,6 +12,7 @@ if (keyboard_check(ord("R"))) {
 	with(obj_fade) {
 		dead = true;
 	}
+	instance_create_depth(x,y,depth, obj_explode);
 	instance_destroy();
 }
 
@@ -19,5 +20,6 @@ if (place_meeting(x + target.hspd, y + target.vspd, obj_spike)) {
 	with(obj_fade) {
 		dead = true;
 	}
+	instance_create_depth(x,y,depth, obj_explode);
 	instance_destroy();
 }
