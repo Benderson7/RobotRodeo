@@ -42,6 +42,7 @@ if (vspd >= termvel) {
 
 if (keyboard_check_pressed(ord("W")) && onground) {
 	vspd = -jump;	
+	audio_play_sound(snd_jump, 10, false);
 }
 
 if (place_meeting(x + hspd, y + vspd, obj_spike) && iframe == 0) {
@@ -96,6 +97,7 @@ if (place_meeting(x, y+vspd, obj_enemy) && iframe == 0) {
 		newboy.dummylist = dummylist;
 		newboy.dummylist[array_length(dummylist)] = charid;
 		instance_destroy(enem);
+		audio_play_sound(snd_stack, 10, false);
 		instance_destroy();
 	} else {
 		son = instance_place(x, y-2, obj_dummy)

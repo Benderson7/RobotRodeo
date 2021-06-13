@@ -25,7 +25,8 @@ if (vspd >= termvel) {
 }
 
 if (keyboard_check_pressed(ord("W")) && onground) {
-	vspd = -jump;	
+	vspd = -jump;
+	audio_play_sound(snd_jump, 10, false);
 }
 
 if (place_meeting(x + hspd, y + vspd, obj_spike) && iframe == 0) {
@@ -79,6 +80,7 @@ if (place_meeting(x, y+vspd, obj_enemy) && iframe == 0) {
 		with (newboy) {
 			dummylist = ["S"];
 		}
+		audio_play_sound(snd_stack, 10, false);
 		instance_destroy(enem);
 		instance_destroy();
 	} else {
@@ -94,10 +96,40 @@ if (hspd > 0) {
 	if(!facingright) {
 		facingright = true;
 	}
+	image_speed = 2;
+	if (place_meeting(x,y+2,obj_wall)) {
+		ismoving = true;	
+	} else {
+		ismoving = false;	
+	}
 } else if (hspd < 0) {
 	if(facingright) {
 		facingright = false;	
 	}
+	image_speed = 2;
+	if (place_meeting(x,y+2,obj_wall)) {
+		ismoving = true;	
+	} else {
+		ismoving = false;	
+	}
+} else {
+	image_speed = 0;
+	image_index = 0;
+	ismoving = false;
+}
+
+if (ismoving) {
+	walk_count++;
+	if (walk_count == 15) {
+		audio_play_sound(snd_spurs, 10, false);	
+		walk_count = 0;
+	}
+}
+
+if(facingright){
+	sprite_index = right_sprite;	
+} else {
+	sprite_index = left_sprite;	
 }
 
 if(facingright){

@@ -96,6 +96,7 @@ if (place_meeting(x, y+vspd, obj_enemy) && iframe == 0) {
 		newboy.dummylist = dummylist;
 		newboy.dummylist[array_length(dummylist)] = charid;
 		instance_destroy(enem);
+		audio_play_sound(snd_stack, 10, false);
 		instance_destroy();
 	} /*else {
 		son = instance_place(x, y-2, obj_dummy)
