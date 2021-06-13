@@ -9,7 +9,7 @@ jump = 15;
 coyote = 0;
 
 
-hspd = 0 //-spd;
+hspd = -spd;
 vspd = 0;
 onground = true;
 
@@ -18,3 +18,6 @@ image_speed = 2;
 facingright = true;
 right_sprite = spr_enemy_right;
 left_sprite = spr_enemy_left;
+
+minx = 0;
+maxx = room_width;

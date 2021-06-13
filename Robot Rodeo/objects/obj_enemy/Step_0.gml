@@ -23,6 +23,10 @@ if (place_meeting(x+hspd, y, obj_wall)) {
 	hspd *= -1;	
 }
 
+if ( x+hspd > maxx || x+hspd < minx) {
+	hspd *= -1;	
+}
+
 if (hspd > 0) {
 	if(!facingright) {
 		facingright = true;

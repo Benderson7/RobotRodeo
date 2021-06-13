@@ -2,6 +2,13 @@
 // You can write your code in this editor
 hspd = 0;
 
+if (keyboard_check(ord("R"))) {
+	with(obj_fade) {
+		dead = true;
+	}
+	instance_destroy();
+}
+
 if (keyboard_check(ord("A"))) {
  hspd = -spd;
 } 
