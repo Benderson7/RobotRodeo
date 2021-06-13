@@ -8,7 +8,7 @@ y = 0;
 
 image_xscale *= 200;
 image_yscale *= 200;
-depth = -1000;
+depth = -10;
 
 wait = 90;
 
