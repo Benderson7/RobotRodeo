@@ -9,7 +9,7 @@ jump = 15;
 coyote = 0;
 
 
-hspd = -spd;
+hspd = 0 //-spd;
 vspd = 0;
 onground = true;
 

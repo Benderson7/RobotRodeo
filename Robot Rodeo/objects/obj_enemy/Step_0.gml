@@ -23,5 +23,6 @@ if (place_meeting(x+hspd, y, obj_wall)) {
 	hspd *= -1;	
 }
 
+
 y += vspd;
 x += hspd;

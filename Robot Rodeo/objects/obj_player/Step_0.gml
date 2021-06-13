@@ -20,8 +20,17 @@ if (keyboard_check_pressed(ord("W")) && onground) {
 	vspd = -jump;	
 }
 
-if (place_meeting(x + hspd, y + vspd, obj_spike)) {
+if (place_meeting(x + hspd, y + vspd, obj_spike) && iframe == 0) {
+	with(obj_fade) {
+		dead = true;	
+	}
 	instance_destroy();
+}
+
+if (place_meeting(x + hspd, y + vspd, obj_badge)) {
+	with(obj_fade) {
+		win = true;	
+	}
 }
 
 if (place_meeting(x, y+vspd, obj_wall)) {
@@ -48,7 +57,7 @@ if (place_meeting(x+hspd, y, obj_wall)) {
 	hspd = 0;	
 }
 
-if (place_meeting(x, y+vspd, obj_enemy)) {
+if (place_meeting(x, y+vspd, obj_enemy) && iframe == 0) {
 	if (vspd > 0) {
 		enem = instance_place(x, y+vspd, obj_enemy);
 		if (enem.charid == "F") {
@@ -64,7 +73,10 @@ if (place_meeting(x, y+vspd, obj_enemy)) {
 		instance_destroy(enem);
 		instance_destroy();
 	} else {
-		instance_destroy();	
+		with(obj_fade) {
+			dead = true;	
+		}
+		instance_destroy();
 	}
 }
 
@@ -72,3 +84,17 @@ if (place_meeting(x, y+vspd, obj_enemy)) {
 
 y += vspd;
 x += hspd;
+
+if(iframe <= 0) {
+	iframe = 0;	
+	image_alpha = 1;
+} else {
+	iframe -= 1;
+	if (iframe % 7 == 0) {
+		if (image_alpha == 0.5) {
+			image_alpha = 1;
+		}	else {
+			image_alpha = 0.5;
+		}
+	}
+}

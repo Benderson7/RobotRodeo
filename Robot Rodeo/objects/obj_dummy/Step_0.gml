@@ -13,23 +13,29 @@ if (place_meeting(x, y - target.vspd * sign(target.vspd), obj_wall)) {
 }
 
 if (becomeboy) {
+	iframetime = 90;
 	if (charid != "S") {
 		if (charid == "F") {
 			newboy = instance_create_depth(x,y,depth, obj_enem_player1);	
 			newboy.dummylist = potentialdummylist;
+			newboy.iframe = iframetime;
 		} else if (charid == "J") {
 			newboy	= instance_create_depth(x,y,depth, obj_enem_player_jump);	
 			newboy.dummylist = potentialdummylist;
+			newboy.iframe = iframetime;
 		} else if (charid == "A") {
 			newboy	= instance_create_depth(x,y,depth, obj_enem_player_armor);	
 			newboy.dummylist = potentialdummylist;
+			newboy.iframe = iframetime;
+			
 		}
 		
 		with(obj_dummy) {
 			instance_destroy();	
 		}
 	} else {
-		instance_create_depth(x,y,depth,obj_player);
+		newboy = instance_create_depth(x,y,depth,obj_player);
+		newboy.iframe = iframetime;
 		instance_destroy();
 	}
 }

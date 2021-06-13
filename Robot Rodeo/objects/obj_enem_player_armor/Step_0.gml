@@ -43,7 +43,11 @@ if (vspd >= termvel) {
 
 
 if (place_meeting(x + hspd, y + vspd, obj_spike)) {
-	son = instance_place(x, y-2, obj_dummy)
+	spike = instance_place(x + hspd, y+vspd, obj_spike)
+	if (y <= spike.y - 63) {
+		//   :)	
+	} else if (iframe == 0) {
+		son = instance_place(x, y-2, obj_dummy)
 		son.becomeboy = true;
 		newdummies = [];
 		for (var i = 0; i < array_length(dummylist) - 1; i++) {
@@ -52,6 +56,7 @@ if (place_meeting(x + hspd, y + vspd, obj_spike)) {
 		son.potentialdummylist = newdummies;
 
 		instance_destroy();
+	}
 }
 
 if (place_meeting(x, y+vspd, obj_wall)) {
@@ -78,7 +83,7 @@ if (place_meeting(x+hspd, y, obj_wall)) {
 	hspd = 0;	
 }
 
-if (place_meeting(x, y+vspd, obj_enemy)) {
+if (place_meeting(x, y+vspd, obj_enemy) && iframe == 0) {
 	if (vspd > 0) {
 		with(obj_dummy){
 			instance_destroy();	
@@ -122,8 +127,23 @@ if (topcollidetop && vspd < 0) {
 	vspd = 0;	
 }
 
+
 y += vspd;
 x += hspd;
+
+if(iframe <= 0) {
+	iframe = 0;	
+	image_alpha = 1;
+} else {
+	iframe -= 1;
+	if (iframe % 7 == 0) {
+		if (image_alpha == 0.5) {
+			image_alpha = 1;
+		}	else {
+			image_alpha = 0.5;
+		}
+	}
+}
 
 topcollideright = false;
 topcollideleft = false;
