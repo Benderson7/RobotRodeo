@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"obj_bull","path":"objects/obj_bull/obj_bull.yy",},"order":12,},
     {"id":{"name":"obj_dummy","path":"objects/obj_dummy/obj_dummy.yy",},"order":4,},
     {"id":{"name":"_05_Jump_Too_Tall","path":"rooms/_05_Jump_Too_Tall/_05_Jump_Too_Tall.yy",},"order":9,},
     {"id":{"name":"spr_spike","path":"sprites/spr_spike/spr_spike.yy",},"order":4,},
@@ -26,6 +27,7 @@
     {"id":{"name":"spr_girder","path":"sprites/spr_girder/spr_girder.yy",},"order":12,},
     {"id":{"name":"spr_goat","path":"sprites/spr_goat/spr_goat.yy",},"order":11,},
     {"id":{"name":"obj_goat","path":"objects/obj_goat/obj_goat.yy",},"order":8,},
+    {"id":{"name":"spr_cow","path":"sprites/spr_cow/spr_cow.yy",},"order":13,},
     {"id":{"name":"_06_Wait_For_Sheep","path":"rooms/_06_Wait_For_Sheep/_06_Wait_For_Sheep.yy",},"order":5,},
     {"id":{"name":"spr_background_1","path":"sprites/spr_background_1/spr_background_1.yy",},"order":9,},
     {"id":{"name":"obj_enem_dummy","path":"objects/obj_enem_dummy/obj_enem_dummy.yy",},"order":6,},
