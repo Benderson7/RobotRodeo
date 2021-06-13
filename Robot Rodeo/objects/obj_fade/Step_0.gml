@@ -15,6 +15,7 @@ if (dead || win) {
 	with(obj_dummy) {
 		instance_create_depth(x,y,depth, obj_explode);
 		instance_deactivate_object(self);
+		
 	}
 }
 

@@ -41,7 +41,9 @@ if (vspd >= termvel) {
 }
 
 if (onground) {
-	vspd = -jump - 5;	
+	vspd = -jump - 5;
+	audio_play_sound(snd_goat,10,false);
+	//onground = false;
 }
 
 if (place_meeting(x + hspd, y + vspd, obj_spike) && iframe == 0) {

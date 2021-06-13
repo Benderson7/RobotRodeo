@@ -153,12 +153,20 @@ if (hspd > 0) {
 }
 
 if (ismoving) {
-	walk_count++;
-	if (walk_count == 15) {
-		audio_play_sound(snd_sheep, 10, false);	
-		walk_count = 0;
+	walk_count--;
+	if (walk_count <= 0) {
+		audio_play_sound(snd_spurs, 10, false);	
+		walk_count = 17;
 	}
 }
+
+if(facingright){
+	sprite_index = right_sprite;	
+} else {
+	sprite_index = left_sprite;	
+}
+
+
 
 
 y += vspd;

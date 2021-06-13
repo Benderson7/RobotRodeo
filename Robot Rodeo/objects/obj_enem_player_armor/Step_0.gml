@@ -160,10 +160,16 @@ if (hspd > 0) {
 
 if (ismoving) {
 	walk_count++;
-	if (walk_count == 15) {
+	if (walk_count == 40) {
 		audio_play_sound(snd_cow, 10, false);	
 		walk_count = 0;
 	}
+}
+
+if(facingright){
+	sprite_index = right_sprite;	
+} else {
+	sprite_index = left_sprite;	
 }
 
 y += vspd;
