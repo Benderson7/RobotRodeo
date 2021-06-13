@@ -121,7 +121,6 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"Win","path":"rooms/Win/Win.yy",},},
     {"roomId":{"name":"Title","path":"rooms/Title/Title.yy",},},
     {"roomId":{"name":"Story","path":"rooms/Story/Story.yy",},},
     {"roomId":{"name":"_01_Learn_Movement","path":"rooms/_01_Learn_Movement/_01_Learn_Movement.yy",},},
@@ -134,6 +133,7 @@
     {"roomId":{"name":"_08_Fall_And_Climb","path":"rooms/_08_Fall_And_Climb/_08_Fall_And_Climb.yy",},},
     {"roomId":{"name":"_09_Double_Doors","path":"rooms/_09_Double_Doors/_09_Double_Doors.yy",},},
     {"roomId":{"name":"_10_Super_Stack","path":"rooms/_10_Super_Stack/_10_Super_Stack.yy",},},
+    {"roomId":{"name":"Win","path":"rooms/Win/Win.yy",},},
     {"roomId":{"name":"About","path":"rooms/About/About.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
