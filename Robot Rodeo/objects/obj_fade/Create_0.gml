@@ -14,3 +14,4 @@ wait = 90;
 
 dead = false;
 win = false;
+already_played = false;
