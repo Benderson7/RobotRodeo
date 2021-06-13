@@ -131,20 +131,33 @@ if (hspd > 0) {
 		facingright = true;
 	}
 	image_speed = 2;
+	if (place_meeting(x,y+2,obj_wall)) {
+		ismoving = true;	
+	} else {
+		ismoving = false;	
+	}
 } else if (hspd < 0) {
 	if(facingright) {
 		facingright = false;	
 	}
 	image_speed = 2;
+	if (place_meeting(x,y+2,obj_wall)) {
+		ismoving = true;	
+	} else {
+		ismoving = false;	
+	}
 } else {
 	image_speed = 0;
 	image_index = 0;
+	ismoving = false;
 }
 
-if(facingright){
-	sprite_index = right_sprite;	
-} else {
-	sprite_index = left_sprite;	
+if (ismoving) {
+	walk_count++;
+	if (walk_count == 15) {
+		audio_play_sound(snd_sheep, 10, false);	
+		walk_count = 0;
+	}
 }
 
 

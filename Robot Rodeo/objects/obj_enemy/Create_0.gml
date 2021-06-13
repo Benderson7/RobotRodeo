@@ -21,3 +21,4 @@ left_sprite = spr_enemy_left;
 
 minx = 0;
 maxx = room_width;
+

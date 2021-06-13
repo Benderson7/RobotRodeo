@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_sheep",
-  "duration": 0.0,
+  "soundFile": "snd_sheep.wav",
+  "duration": 3.162891,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
