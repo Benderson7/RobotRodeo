@@ -108,7 +108,10 @@ if (place_meeting(x, y+vspd, obj_enemy) && iframe == 0) {
 			newdummies[i] = dummylist[i];	
 		}
 		son.potentialdummylist = newdummies;
-
+		
+		destroy = instance_place(x, y+vspd, obj_enemy);
+		instance_destroy(destroy);
+		
 		instance_destroy();
 	}
 }
