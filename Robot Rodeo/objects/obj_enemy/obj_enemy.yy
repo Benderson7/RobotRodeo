@@ -7,7 +7,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_can_be_moved",
+    "path": "objects/obj_can_be_moved/obj_can_be_moved.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

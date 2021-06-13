@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+global.freq1 = false
+global.freq2 = false
+
 x = 0;
 y = 0;
 
